@@ -1,10 +1,10 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/hltetmo/BoardConfigVendor.mk
+-include vendor/samsung/hlte/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := hltetmo
+TARGET_BOOTLOADER_BOARD_NAME := hlte
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
@@ -29,7 +29,7 @@ BOARD_KERNEL_CMDLINE :=  console=null androidboot.hardware=qcom user_debug=31 ms
 BOARD_KERNEL_BASE :=  0x00000000
 #BOARD_FORCE_RAMDISK_ADDRESS := 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/hltetmo/dtb --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/hlte/dtb --tags_offset 0x01e00000
 
 BOARD_BOOTIMAGE_PARTITION_SIZE :=     0x105c0000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00D00000
@@ -37,14 +37,14 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/hltetmo/kernAl
+TARGET_PREBUILT_KERNEL := device/samsung/hlte/kernAl
 
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
-#BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/hltetmo/custombootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/hlte/custombootimg.mk
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 1080x1920
@@ -69,3 +69,4 @@ TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_as
 TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_KEY_LOC := "footer"
 TW_NO_EXFAT_FUSE := true
+TW_NO_RTC := true

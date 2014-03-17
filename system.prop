@@ -9,6 +9,7 @@ ro.build.version.release=4.3
 ro.build.date=Wed Sep 11 15:30:59 KST 2013
 ro.build.date.utc=1378881059
 ro.build.type=user
+ro.hardware=msm8974
 ro.build.user=se.infra
 ro.build.host=R0504-11
 ro.build.tags=release-keys

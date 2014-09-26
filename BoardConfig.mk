@@ -44,6 +44,8 @@ TARGET_PREBUILT_KERNEL := device/samsung/hlte/kernAl
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+BOARD_SUPPRESS_SECURE_ERASE := true
 #BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/hlte/custombootimg.mk
 
 # TWRP specific build flags
@@ -52,7 +54,7 @@ RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-#TW_BRIGHTNESS_PATH := /sys/devices/qcom,mdss_dsi_samsung_octa_1080p_cmd.71/lcd/panel/panel/brightness
+TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.173/leds/lcd-backlight/brightness"
 #TW_MAX_BRIGHTNESS := 255
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
@@ -71,3 +73,4 @@ TW_CRYPTO_KEY_LOC := "footer"
 TW_NO_EXFAT_FUSE := true
 TW_NO_EXFAT := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_MTP_DEVICE := "/dev/usb_mtp_gadget"

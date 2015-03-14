@@ -1,2 +1,3 @@
 on early-init
 	setenforce permissive
+	ln -s /system/vendor /vendor

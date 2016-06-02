@@ -48,38 +48,28 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 	if (strstr(bootloader, "N900A")) {
 		/* hlteatt */
 		property_set("ro.product.model", "SM-N900A");
-		property_set("ro.product.name", "hlteuc");
-		property_set("ro.product.device", "hlteatt");
+		property_set("ro.product.name", "hlteatt");
 	} else if (strstr(bootloader, "N900W8")) {
 		/* hltecan */
-		if (strstr(bootloader, "N900W8UB"))
-			property_set("ro.product.name", "hlteub");
-		else
-			property_set("ro.product.name", "hltevl");
 		property_set("ro.product.model", "SM-N900W8");
-		property_set("ro.product.device", "hltecan");
+		property_set("ro.product.name", "hltecan");
 	} else if (strstr(bootloader, "N900P")) {
 		/* hltespr */
 		property_set("ro.product.model", "SM-N900P");
 		property_set("ro.product.name", "hltespr");
-		property_set("ro.product.device", "hltespr");
 	} else if (strstr(bootloader, "N900T")) {
 		/* hltetmo */
 		property_set("ro.product.model", "SM-N900T");
 		property_set("ro.product.name", "hltetmo");
-		property_set("ro.product.device", "hltetmo");
 	} else if (strstr(bootloader, "N900R4")) {
 		/* hlteusc */
 		property_set("ro.product.model", "SM-N900R4");
 		property_set("ro.product.name", "hlteusc");
-		property_set("ro.product.device", "hlteusc");
 	} else if (strstr(bootloader, "N900V")) {
 		/* hltevzw */
 		property_set("ro.product.model", "SM-N900V");
 		property_set("ro.product.name", "hltevzw");
-		property_set("ro.product.device", "hltevzw");
 	} else {
-		/* hlte */
 		if (strstr(bootloader, "N9005DX")) {
 			/* hlte/dx */
 			property_set("ro.product.name", "hltedx");
@@ -94,6 +84,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 			property_set("ro.product.name", "hltexx");
 		}
 		property_set("ro.product.model", "SM-N9005");
-		property_set("ro.product.device", "hlte");
 	}
+	property_set("ro.product.device", "hlte");
 }

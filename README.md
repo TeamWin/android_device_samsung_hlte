@@ -11,5 +11,5 @@ Add to `.repo/local_manifests/hlte.xml`:
 
 Then run `repo sync` to check it out.
 
-Kernel sources are available at: https://github.com/jcadduono/idleKernel-note3/tree/ik-twrp
+Kernel sources are available at: https://github.com/jcadduono/twrp_kernel_samsung_hlte/tree/twrp-5.0
 

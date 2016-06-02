@@ -1,30 +1,17 @@
-on early-init
-    # ensure overclocking is not active
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2265600
-
-on init
-    # set up crypto libs
-    mkdir /firmware
-    mkdir /vendor/firmware
-    mkdir /vendor/firmware/keymaster
-    wait /dev/block/platform/msm_sdcc.1/by-name/apnhlos
-    mount vfat /dev/block/platform/msm_sdcc.1/by-name/apnhlos /firmware
-    symlink /firmware/image/keymaste.b00 /vendor/firmware/keymaster/keymaster.b00
-    symlink /firmware/image/keymaste.b01 /vendor/firmware/keymaster/keymaster.b01
-    symlink /firmware/image/keymaste.b02 /vendor/firmware/keymaster/keymaster.b02
-    symlink /firmware/image/keymaste.b03 /vendor/firmware/keymaster/keymaster.b03
-    symlink /firmware/image/keymaste.mdt /vendor/firmware/keymaster/keymaster.mdt
-    symlink /firmware/image/cmnlib.b00 /vendor/firmware/cmnlib.b00
-    symlink /firmware/image/cmnlib.b01 /vendor/firmware/cmnlib.b01
-    symlink /firmware/image/cmnlib.b02 /vendor/firmware/cmnlib.b02
-    symlink /firmware/image/cmnlib.b03 /vendor/firmware/cmnlib.b03
-    symlink /firmware/image/cmnlib.mdt /vendor/firmware/cmnlib.mdt
-    symlink /sbin/libQSEEComAPI.so /vendor/lib/libQSEEComAPI.so
+# temperature & battery usage reduction
+on boot
+    write /sys/devices/qcom,cpubw.42/devfreq/qcom,cpubw.42/governor powersave
+    write /sys/devices/platform/gpusysfs/gpu_governor powersave
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
 
 # encryption support
 service qseecomd /sbin/qseecomd
 
-service logd /sbin/logd
+service logd /system/bin/logd
+    disabled
     class core
     socket logd stream 0666 logd logd
     socket logdr seqpacket 0666 logd logd

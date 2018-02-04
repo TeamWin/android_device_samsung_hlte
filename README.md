@@ -1,15 +1,23 @@
-## TWRP device tree for Galaxy Note 3 (Europe & Americas)
+## TWRP device tree for Samsung Galaxy Note 3 (Europe & Americas)
+## hlte, hltechn, hltetmo, hltespr, hlteusc, hltevzw
 
 Add to `.repo/local_manifests/hlte.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/samsung/hlte" name="android_device_samsung_hlte" remote="TeamWin" revision="android-6.0" />
+  <project name="ripee/twrp_android_device_samsung_hlte" path="device/samsung/hlte" remote="github" revision="android-7.1" />
 </manifest>
 ```
 
 Then run `repo sync` to check it out.
 
-Kernel sources are available at: https://github.com/jcadduono/twrp_kernel_samsung_hlte/tree/twrp-5.0
+To build:
 
+```sh
+. build/envsetup.sh
+lunch omni_hlte-eng
+mka recoveryimage
+```
+
+Kernel source: https://github.com/LineageOS/android_kernel_samsung_hlte/tree/cm-14.1

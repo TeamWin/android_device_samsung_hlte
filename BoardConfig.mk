@@ -25,10 +25,10 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK :=  $(DEVICE_TREE)/mkbootimg.mk
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F
+BOARD_KERNEL_CMDLINE := console=null user_debug=31 msm_rtb.filter=0x3F
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 LZMA_RAMDISK_TARGETS := recovery
 
 # Partitions
@@ -66,3 +66,8 @@ TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_CRYPTO := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
+# Init properties from bootloader version, ex. model info
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/hlte/init/init_hlte.cpp

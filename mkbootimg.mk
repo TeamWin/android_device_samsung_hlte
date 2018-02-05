@@ -17,10 +17,6 @@ LOCAL_PATH := $(call my-dir)
 BUILT_RAMDISK_CPIO := $(PRODUCT_OUT)/ramdisk-recovery.cpio
 COMPRESS_COMMAND := xz --format=lzma --lzma1=dict=16MiB
 
-ifdef TARGET_PREBUILT_DTB
-	BOARD_MKBOOTIMG_ARGS += --dt $(TARGET_PREBUILT_DTB)
-endif
-
 INSTALLED_RECOVERYIMAGE_TARGET := $(PRODUCT_OUT)/recovery.img
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(recovery_ramdisk)
 	@echo "------- Compressing recovery ramdisk -------"

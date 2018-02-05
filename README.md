@@ -20,4 +20,4 @@ lunch omni_hlte-eng
 mka recoveryimage
 ```
 
-Kernel source: https://github.com/LineageOS/android_kernel_samsung_hlte/tree/cm-14.1
+Kernel source: https://github.com/LineageOS/android_kernel_samsung_msm8974/tree/cm-14.1

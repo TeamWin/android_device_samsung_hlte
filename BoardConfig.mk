@@ -66,8 +66,3 @@ TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_CRYPTO := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
-
-# Init properties from bootloader version, ex. model info
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_hlte
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/init_hlte.cpp

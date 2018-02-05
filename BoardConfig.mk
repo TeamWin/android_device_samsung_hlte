@@ -28,7 +28,6 @@ BOARD_CUSTOM_BOOTIMG_MK :=  $(DEVICE_TREE)/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-#BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 LZMA_RAMDISK_TARGETS := recovery
 
@@ -68,8 +67,3 @@ TW_INCLUDE_CRYPTO := true
 TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
 TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
-
-# Init properties from bootloader version, ex. model info
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_hlte
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/init_hlte.cpp

@@ -24,8 +24,8 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
-#TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/zImage-dtb
-BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/zImage-dtb
+#BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_TREE)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F androidboot.bootdevice=msm_sdcc.1

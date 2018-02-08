@@ -67,3 +67,5 @@ TW_EXCLUDE_SUPERSU := true
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
+
+TW_DEVICE_VERSION := 1

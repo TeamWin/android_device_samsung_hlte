@@ -27,7 +27,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
-TARGET_KERNEL_CONFIG := msm8974_defconfig
+TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := lineage_hlte_bcm2079x_defconfig
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 

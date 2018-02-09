@@ -24,8 +24,16 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_TREE)/mkbootimg.mk
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
+TARGET_KERNEL_ARCH := arm
+TARGET_KERNEL_HEADER_ARCH := arm
+TARGET_KERNEL_CONFIG := msm8974_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := lineage_hlte_bcm2079x_defconfig
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
+
+# Kernel
+#TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
+#BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_TREE)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_PAGESIZE := 2048

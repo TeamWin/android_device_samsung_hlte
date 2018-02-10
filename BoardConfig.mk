@@ -26,8 +26,8 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_KERNEL_SOURCE := kernel/samsung/hltexx
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
-TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_eur_defconfig
+TARGET_KERNEL_CONFIG := msm8974_sec_hlte_eur_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_defconfig
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 # Kernel

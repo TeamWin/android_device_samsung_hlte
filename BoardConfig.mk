@@ -23,15 +23,8 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_KERNEL_SOURCE := kernel/samsung/hltexx
-TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_HEADER_ARCH := arm
-TARGET_KERNEL_CONFIG := msm8974_sec_hlte_eur_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_defconfig
-KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
-
 # Kernel
-#TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_PAGESIZE := 2048

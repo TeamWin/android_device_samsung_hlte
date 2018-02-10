@@ -25,6 +25,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_TREE)/dtb.img
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_TREE)/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F
 BOARD_KERNEL_BASE := 0x00000000

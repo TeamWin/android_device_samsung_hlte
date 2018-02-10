@@ -31,7 +31,9 @@ TARGET_KERNEL_CONFIG := lineage_hlte_bcm2079x_defconfig
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 # Kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
+#TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
+#TARGET_PREBUILT_KERNEL := device/samsung/hlte/zImage
+#TARGET_PREBUILT_DTB := device/samsung/hlte/dtb.img
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_PAGESIZE := 2048

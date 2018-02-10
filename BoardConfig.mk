@@ -24,14 +24,16 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
-#TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/zImage
-TARGET_PREBUILT_DTB := $(DEVICE_TREE)/dtb.img
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 LZMA_RAMDISK_TARGETS := recovery
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_TREE)/mkbootimg.mk
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
+TARGET_KERNEL_CONFIG := lineage_hlte_bcm2079x_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 11534336

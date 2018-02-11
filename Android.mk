@@ -17,6 +17,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter hltexx hltecan hltespr hltetmo hlteusc hltevzw,$(TARGET_DEVICE)),)
+ifneq ($(filter hlte hltecan hltekor hltespr hltetmo hlteusc hltevzw hltexx,$(TARGET_DEVICE)),)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif

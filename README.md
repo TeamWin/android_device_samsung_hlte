@@ -1,4 +1,4 @@
-## TWRP device tree for Samsung Galaxy Note 3 (Americas, Korea & Europe)
+## TWRP device tree for Samsung Galaxy Note 3 (Americas, Europe & Korea)
 ## hltexx, hltecan, hltekor, hltespr, hltetmo, hlteusc, hltevzw
 
 Add to `.repo/local_manifests/hlte.xml`:
